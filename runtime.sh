@@ -32,8 +32,8 @@ done
 if [[ $file_count -gt 0 ]]; then
   # Calculate average runtime
   avg_runtime=$(echo "$total_runtime / $file_count" | bc -l)
-  printf "Total runtime: %.2f minutes\n" $total_runtime
-  printf "Average runtime: %.2f minutes\n" $avg_runtime
+  printf "Total runtime: %.1f minutes\n" $total_runtime
+  printf "Average runtime: %.1f minutes\n" $avg_runtime
 else
   echo "No files found with runtime data."
 fi
