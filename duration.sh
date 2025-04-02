@@ -16,8 +16,8 @@ fi
 # Loop through all .md files in the specified folder
 for file in "$folder"/*.md; do
   if [[ -f "$file" ]]; then
-    # Extract duration using grep and awk, assuming format is "Runtime: X minutes"
-    duration=$(grep -oP 'Runtime:\s*\K[0-9.]+(?=\s*minutes)' "$file")
+    # Extract duration using grep and awk, assuming format is "Duration: X minutes"
+    duration=$(grep -oP 'Duration:\s*\K[0-9.]+(?=\s*minutes)' "$file")
     
     if [[ -n "$duration" ]]; then
       # Increment the file count
